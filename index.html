@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE-edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kanban Board</title>
+
+    <link rel="stylesheet" href="styles.css" />
+    <script src="drag.js" defer></script>
+    <script src="todo.js" defer></script>
+
+    <style>
+      /* Inline CSS for demonstration purposes */
+      .common-description {
+        margin-top: 20px; /* Add some top margin to push the text below the sections */
+        text-align: center; /* Center the text */
+      }
+    </style>
+  </head>
+  <body>
+    <div class="frame">
+      <form id="todo-form">
+        <input type="text" placeholder="New TODO..." id="todo-input" />
+        <button type="submit">Add</button>
+      </form>
+
+      <div class="lanes">
+        <div class="swim-lane" id="todo-lane">
+          <h3 class="heading">TODO</h3>
+
+          <p class="task" id="t1" draggable="true">Gardening</p>
+          <p class="task" id="t2" draggable="true">Grocery Shopping</p>
+          <p class="task" id="t3" draggable="true">Present for mom's birthday</p>
+        </div>
+
+        <div class="swim-lane">
+          <h3 class="heading">In Progress</h3>
+
+          <p class="task" id="t4" draggable="true">Group Project</p>
+        </div>
+
+        <div class="swim-lane">
+          <h3 class="heading">Completed</h3>
+
+          <p class="task" id="t5" draggable="true">Exercise</p>
+        </div>
+      </div>
+       <p class="common-description">You can drag the tasks between sections and click on them to delete it.</p>
+    </div>
+  </body>
+</html>
